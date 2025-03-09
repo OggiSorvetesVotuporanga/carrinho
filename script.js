@@ -381,7 +381,8 @@ document.getElementById("enviarPedido").addEventListener("click", function () {
     const terminoConteiner = document.querySelector(".terminoConteiner");
     terminoConteiner.style = "display:flex;";
 
-    const dataFormatada = new Date(dataReserva).toLocaleDateString("pt-BR", {
+    const dataObj = new Date(dataReserva + "T00:00:00"); // Garante que o horário seja meia-noite localmente
+    const dataFormatada = dataObj.toLocaleDateString("pt-BR", {
       day: "2-digit",
       month: "2-digit",
       year: "numeric",
