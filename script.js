@@ -362,7 +362,7 @@ function updateTotal() {
     boll.style = "display:none;";
   }
 
-  if (total >= 300 && !alertShown) {
+  if (total >= 200 && !alertShown) {
     alertaConteiner.style = "display: flex";
     alertShown = true; 
   }
