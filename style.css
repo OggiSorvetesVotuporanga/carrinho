@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#template-oggi-fest {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.capa {
+  width: 90%;
+  max-width: 500px;
+}
+.fa-cart-shopping {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  font-size: 2rem;
+  color: purple;
+  background-color: white;
+  padding: 12px;
+  border-radius: 50%;
+}
+.fa-cart-shopping:hover{
+background-color: rgba(128, 0, 128, 0.199);
+}
+.boll::after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+ right: 10px;
+ top: 10px;
+}
+#conteiner-picoles {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#conteiner-picoles h1 {
+  text-align: center;
+  padding: 15px;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+#conteiner-picoles h2 {
+  text-align: center;
+  padding: 20px;
+  font-family: "Montserrat";
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+.product {
+  display: flex;
+  width: 90%;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.082);
+  background-color: rgba(194, 194, 194, 0.055);
+  border-radius: 5px;
+}
+.product p {
+  text-align: center;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+.unidades-opção {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+.menos {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 0, 0, 0.719);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: white;
+}
+.unidades-opcao {
+  display: flex;
+  align-items: center;
+}
+
+.menos,
+.mais {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.und {
+  margin: 0 5px;
+}
+
+.menos:hover {
+  transform: scale(110%);
+  background-color: rgba(255, 0, 0, 0.705);
+}
+.mais {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 128, 0, 0.658);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: white;
+}
+.mais:hover {
+  transform: scale(110%);
+  background-color: rgba(0, 128, 0, 0.822);
+}
+.und {
+  padding: 10px;
+}
+
+
+.alertaConteiner{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.137);
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+
+}
+.alerta{
+  width: 90%;
+  min-width: 320px;
+  max-width: 500px;
+  padding: 25px;
+  background-color: purple;
+  color: white;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  border-radius: 10px;
+  position: relative;
+}
+.alerta h2{
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.alerta strong{
+  color: rgb(3, 189, 3);
+}
+.btns{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.btns button{
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+.btns button:nth-child(1){
+  padding: 10px;
+  width: 40%;
+  border-radius: 7px;
+  border: 0;
+  background-color: white;
+}
+.btns button:nth-child(2){
+  padding: 10px;
+  width: 40%;
+  border-radius: 7px;
+  border: 0;
+  background-color: rgb(253, 166, 5);
+}
+
+.carrinho-conteiner {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: 0.2s entrar linear;
+  z-index: 4;
+
+}
+@keyframes entrar {
+  0%{
+    margin-right: -500px;
+  }
+}
+.carrinho-conteiner h1 {
+  margin: 5px 0 20px 0;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.conteiner-produtos {
+  width: 90%;
+  max-width: 500px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.conteiner-produtos::-webkit-scrollbar {
+  width: 1px;
+}
+
+.conteiner-produtos::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.conteiner-produtos::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.valoresTotaisInterface {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infoProduto {
+  display: flex;
+  width: 90%;
+  max-width: 500px;
+  justify-content: space-around;
+}
+.infoProduto {
+  background-color: purple;
+  padding: 15px;
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  border-radius: 5px;
+  
+}
+.infoProduto li {
+  list-style: none;
+}
+.infoProduto ul li:nth-child(3) {
+  width: 40%;
+}
+.produtosLista {
+  color: black;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+  margin-top: 5px;
+  border-bottom: 2px solid purple;
+}
+.produtosLista li {
+  list-style: none;
+}
+ul li:nth-child(3) {
+  width: 40%;
+  text-align: left;
+}
+ul li:nth-child(2) {
+  width: 30%;
+  text-align: left;
+}
+ul li:nth-child(1) {
+  width: 15%;
+  text-align: left;
+}
+
+.geral {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  bottom: 0;
+  align-items: center;
+}
+.valor-und {
+  width: 100%;
+  background-color: purple;
+  color: white;
+  padding: 7px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.valor-und strong {
+  color: rgb(241, 241, 241);
+  font-weight: 700;
+}
+.valor-und {
+  width: 100%;
+}
+.finalizarCarrinho {
+  padding: 15px;
+  width: 100%;
+  margin: 7px 0 10px 0;
+  border-radius: 7px;
+  border: 0;
+  background-color: rgb(253, 166, 5);
+  font-size: 1.2rem;
+}
+.close{
+  width: 90%;
+  max-width: 500px;
+  font-size: 2rem;
+  display: flex; 
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.fa-xmark:hover{
+  color: red;
+}
+.conteinerDadosUser{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: 0.2s entrar linear;
+  z-index: 4;
+
+}
+.conteinerDadosUser h2{
+  margin: 40px 0 20px 0;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+.dados{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.dados input{
+  padding: 15px;
+  margin: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+.dados label{
+  font-size: 1.2rem;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.reserva-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+.dados input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+  margin: 15px 0;
+}
+
+.dados input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(128, 0, 128, 0.274);
+}
+.conteinerDadosUser button{
+  margin: 10px;
+  width: 87%;
+  padding: 15px;
+  background-color: green;
+  border: 0;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.205);
+  position: fixed;
+  bottom: 10px;
+  max-width: 500px;
+}
+.resumo{
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  background-color: purple;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.resumo span{
+  text-align: center;
+font-size: 1.3rem;
+}
+.closeFinal{
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 2rem;
+}
+.terminoConteiner{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.76);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+
+}
+.mensagemFinal{
+  width: 90%;
+height: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+  background-color: purple;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 10px;  
+  color: white;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+.mensagemFinal i{
+  font-size: 1.4em;
+}
+.tag {
+  margin-top: 20px;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.tag a{
+  text-decoration: none;
+  color: black;
+}
+.sugestoes{
+  background-color: purple;
+  color: white;
+  padding: 13px 10px 13px;
+  border: 0;
+  font-size: 1rem;
+  border-radius: 7px;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  margin: 5px 0 15px 0;
+  animation: animar 3s linear infinite;
+  box-shadow: 2px 3px 5px black;
+}
+@keyframes animar{
+  0%{
+    transform: scale(95%);
+  }
+  50%{
+    transform: scale(100%);
+  }
+  100%{
+    transform: scale(95%);
+  }
+}
+.sugestoes:hover{
+  background-color: rgb(95, 1, 95);
+}
+.sugestao-conteiner{
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: purple;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  padding: 20px;
+}
+.sugestao-conteiner h2{
+  margin: 30px 0 30px 0;
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+.sugestao-conteiner div{
+  width: 95%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+text-align: center;
+background-color: rgb(255, 255, 255);
+color: black;
+border-radius: 10px;
+padding: 5px;
+box-shadow: 2px 3px 10px black ;
+margin-top: 20px;
+}
+.sugestao-conteiner p{
+text-align: left;
+margin: 5px;
+font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  width: 70%;
+  position: relative;
+}
+.sugestao-conteiner p::before{
+  content: "";
+  position: absolute;
+  left: -13px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+}
+.sugestao-conteiner h3{
+  margin: 15px;
+  font-size: 1.4rem;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  background-color: rgba(128, 128, 128, 0.158);
+  padding: 7px;
+  border-radius: 5px;
+}
+.sugestao-conteiner strong{
+  color: rgb(109, 2, 109);
+}
+.sugestao-conteiner h4{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: 1.2rem;
+  font-weight: 700;
+ margin: 10px;
+ text-align: left;
+ width: 70%;
+}
+.sugestao-conteiner button{
+  width: 70%;
+  padding: 13px;
+  margin: 10px;
+  background-color: purple;
+  color: white;
+  border: 0;
+  border-radius: 7px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+.fecharSugestoes{
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  font-size: 1.7rem;
+  color: white;
+}
