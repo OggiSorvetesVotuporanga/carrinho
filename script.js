@@ -375,8 +375,9 @@ document.getElementById("enviarPedido").addEventListener("click", function () {
   const nomeUser = document.getElementById("nomeUser").value;
   const dataReserva = document.getElementById("dataReserva").value;
   const pagarUser = document.getElementById("pagarUser").value;
+  const horarioUser = document.getElementById("pagarUser").value;
 
-  if (nomeUser == "" || dataReserva == ""|| pagarUser =="") {
+  if (nomeUser == "" || dataReserva == ""|| pagarUser ==""|| horarioUser=="") {
     alert("Preencha todos os campos!");
   } else {
     const terminoConteiner = document.querySelector(".terminoConteiner");
@@ -388,7 +389,7 @@ document.getElementById("enviarPedido").addEventListener("click", function () {
       month: "2-digit",
       year: "numeric",
     });
-   let mensagem = `Nome: ${nomeUser}\nData de Reserva: (${dataFormatada})\n Forma de Pagamento: (${pagarUser})\n\nProdutos:\n`;
+   let mensagem = `Nome: ${nomeUser}\nData de Reserva: (${dataFormatada})\n Horário de Reserva: (${horarioUser})\n Forma de Pagamento: (${pagarUser})\n\nProdutos:\n`;
     let totalGeral = 0;
     let totalUnidades = 0;
 
