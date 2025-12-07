@@ -1,6 +1,6 @@
 // NUMERO DE TELEFONE DAS OGGI
 // -------------------------------------
-const numeroWhatsApp = "5517991493839"; //-------------
+const numeroWhatsApp = "5517981721808"; //-------------
 // -------------------------------------
 
 const produtos = {
@@ -509,3 +509,4 @@ switch (key) {
     break;
 }
 };
+
