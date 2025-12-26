@@ -411,7 +411,7 @@ document.getElementById("enviarPedido").addEventListener("click", function () {
       mensagem
     )}`;
 
-    fetch("https://script.google.com/macros/s/AKfycbwW7IuhIVclJZK84skKfQOiWhTuV4l1SNhaEPnslBlkPfNIzrT6wQHVUYFkH6ZX4qCpiA/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwW7IuhIVclJZK84skKfQOiWhTuV4l1SNhaEPnslBlkPfNIzrT6wQHVUYFkH6ZX4qCpiA/exec", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
@@ -426,6 +426,31 @@ document.getElementById("enviarPedido").addEventListener("click", function () {
     produtos: listaProdutos
   })
 });
+  function doPost(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const data = JSON.parse(e.postData.contents);
+
+  sheet.appendRow([
+    data.nome,
+    data.dataReserva,
+    data.horario,
+    data.pagamento,
+    data.totalUnidades,
+    data.totalGeral,
+    data.produtos,
+    new Date()
+  ]);
+
+  return ContentService
+    .createTextOutput(JSON.stringify({ status: "ok" }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function doGet() {
+  return ContentService
+    .createTextOutput("API funcionando");
+}
+
 
     window.open(urlWhatsApp, "_blank");
   }
@@ -525,6 +550,7 @@ switch (key) {
     break;
 }
 };
+
 
 
 
