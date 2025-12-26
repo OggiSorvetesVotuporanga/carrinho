@@ -411,6 +411,22 @@ document.getElementById("enviarPedido").addEventListener("click", function () {
       mensagem
     )}`;
 
+    fetch("https://script.google.com/macros/s/AKfycbwW7IuhIVclJZK84skKfQOiWhTuV4l1SNhaEPnslBlkPfNIzrT6wQHVUYFkH6ZX4qCpiA/exec", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    nome: nomeUser,
+    dataReserva: dataFormatada,
+    horario: horarioUser,
+    pagamento: pagarUser,
+    totalUnidades: totalUnidades,
+    totalGeral: totalGeral.toFixed(2),
+    produtos: listaProdutos
+  })
+});
+
     window.open(urlWhatsApp, "_blank");
   }
 });
@@ -509,4 +525,5 @@ switch (key) {
     break;
 }
 };
+
 
