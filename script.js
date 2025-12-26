@@ -411,7 +411,7 @@ document.getElementById("enviarPedido").addEventListener("click", function () {
       mensagem
     )}`;
 
-  fetch("https://script.google.com/macros/s/AKfycbwW7IuhIVclJZK84skKfQOiWhTuV4l1SNhaEPnslBlkPfNIzrT6wQHVUYFkH6ZX4qCpiA/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxAbjANTfXDy38ohndJnVw-nA36rbyLWsmdirIuHvZ-Y3dG5i_usdSuZYo_V9SE_1koBA/exec", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
@@ -550,6 +550,7 @@ switch (key) {
     break;
 }
 };
+
 
 
 
