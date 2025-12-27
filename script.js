@@ -79,6 +79,16 @@ const produtos = {
     nome: "Limão",
     und: 0,
   },
+    goiaba: {
+    valor: 2.25,
+    nome: "Festa Goiaba",
+    und: 0,
+  },
+  manga: {
+    valor: 2.25,
+    nome: "Festa Manga",
+    und: 0,
+  },
   abacaxi: {
     valor: 2.25,
     nome: "Abacaxi",
@@ -555,6 +565,7 @@ switch (key) {
     break;
 }
 };
+
 
 
 
