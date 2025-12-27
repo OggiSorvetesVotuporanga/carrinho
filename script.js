@@ -14,6 +14,11 @@ const produtos = {
     nome: "Festa Frutas Vermelhas",
     und: 0,
   },
+  groselha: {
+    valor: 1.5,
+    nome: "Festa Groselha",
+    und: 0,
+  },
   achocolatado: {
     valor: 1.75,
     nome: "Achocolatado",
@@ -550,6 +555,7 @@ switch (key) {
     break;
 }
 };
+
 
 
 
