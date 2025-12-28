@@ -34,6 +34,11 @@ const produtos = {
     nome: "Mini Bombom Stranger Bites",
     und: 0,
   },
+   estrela: {
+    valor: 8.99,
+    nome: "Picolé Demogorgon Freeze",
+    und: 0,
+  },
   melancia: {
     valor: 1.5,
     nome: "Festa Melancia",
@@ -595,6 +600,7 @@ switch (key) {
     break;
 }
 };
+
 
 
 
