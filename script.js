@@ -4,6 +4,11 @@ const numeroWhatsApp = "5517981721808"; //-------------
 // -------------------------------------
 
 const produtos = {
+   vecnapote: {
+    valor: 34.99,
+    nome: "Doce Vingança do Vecna",
+    und: 0,
+  },
   melancia: {
     valor: 1.5,
     nome: "Festa Melancia",
@@ -565,6 +570,7 @@ switch (key) {
     break;
 }
 };
+
 
 
 
