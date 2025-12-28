@@ -9,6 +9,31 @@ const produtos = {
     nome: "Doce Vingança do Vecna",
     und: 0,
   },
+   demopote: {
+    valor: 34.99,
+    nome: "Misterioso Choco-Cereja",
+    und: 0,
+  },
+   elevenpote: {
+    valor: 34.99,
+    nome: "Extravagância da Onze",
+    und: 0,
+  },
+   picolepreto: {
+    valor: 3.99,
+    nome: "Picolé Chocolate Mundo Invertido",
+    und: 0,
+  },
+    picoleazul: {
+    valor: 3.99,
+    nome: "Picolé Top Hits de Hawkins",
+    und: 0,
+  },
+   bombom: {
+    valor: 10.99,
+    nome: "Mini Bombom Stranger Bites",
+    und: 0,
+  },
   melancia: {
     valor: 1.5,
     nome: "Festa Melancia",
@@ -570,6 +595,7 @@ switch (key) {
     break;
 }
 };
+
 
 
 
