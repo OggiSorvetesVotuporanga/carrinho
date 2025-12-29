@@ -4,6 +4,46 @@ const numeroWhatsApp = "5517981721808"; //-------------
 // -------------------------------------
 
 const produtos = {
+   mickey: {
+    valor: 5.99,
+    nome: "Mickey Leite com Cacau",
+    und: 0,
+  },
+   minie: {
+    valor: 5.99,
+    nome: "Minnie Morango",
+    und: 0,
+  }, 
+   wody: {
+    valor: 5.99,
+    nome: "Woody Caramelo",
+    und: 0,
+  },
+   jessie: {
+    valor: 5.99,
+    nome: "Jessie Leite com Morango e Baunilha",
+    und: 0,
+  },
+   ariel: {
+    valor: 5.99,
+    nome: "Ariel Uva Roxa",
+    und: 0,
+  },
+   peixe: {
+    valor: 5.99,
+    nome: "Baunilha",
+    und: 0,
+  },
+   aranhaazul: {
+    valor: 5.99,
+    nome: "Homem-aranha Iogurte de Morango",
+    und: 0,
+  },
+   aranhavermelha: {
+    valor: 5.99,
+    nome: "Homem-aranha Iogurte de Frutas Vermelhas",
+    und: 0,
+  },
    vecnapote: {
     valor: 34.99,
     nome: "Doce Vingança do Vecna",
@@ -600,6 +640,7 @@ switch (key) {
     break;
 }
 };
+
 
 
 
