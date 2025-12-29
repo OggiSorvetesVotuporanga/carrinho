@@ -500,48 +500,6 @@ document.getElementById("enviarPedido").addEventListener("click", function () {
     const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
       mensagem
     )}`;
-
-  fetch("https://script.google.com/macros/s/AKfycbxAbjANTfXDy38ohndJnVw-nA36rbyLWsmdirIuHvZ-Y3dG5i_usdSuZYo_V9SE_1koBA/exec", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    nome: nomeUser,
-    dataReserva: dataFormatada,
-    horario: horarioUser,
-    pagamento: pagarUser,
-    totalUnidades: totalUnidades,
-    totalGeral: totalGeral.toFixed(2),
-    produtos: listaProdutos
-  })
-});
-  function doPost(e) {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  const data = JSON.parse(e.postData.contents);
-
-  sheet.appendRow([
-    data.nome,
-    data.dataReserva,
-    data.horario,
-    data.pagamento,
-    data.totalUnidades,
-    data.totalGeral,
-    data.produtos,
-    new Date()
-  ]);
-
-  return ContentService
-    .createTextOutput(JSON.stringify({ status: "ok" }))
-    .setMimeType(ContentService.MimeType.JSON);
-}
-
-function doGet() {
-  return ContentService
-    .createTextOutput("API funcionando");
-}
-
-
     window.open(urlWhatsApp, "_blank");
   }
 });
@@ -640,6 +598,7 @@ switch (key) {
     break;
 }
 };
+
 
 
 
